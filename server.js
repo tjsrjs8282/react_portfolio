@@ -6,5 +6,11 @@ app.listen(8080, function () {
 });
 
 app.get("/", function (req, res) {
-  res.send("반갑습니다");
+  res.sendFile(__dirname + "/index.html");
 });
+
+app.get("/get", function (req, res) {
+  res.send("get 페이지 입니다.");
+});
+
+module.exports = app;
