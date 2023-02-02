@@ -1,0 +1,90 @@
+@import '@styles/shared.scss';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700;900&family=Noto+Sans:wght@300;400;600;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  min-height: 100vh;
+  background: $lineColor3;
+  font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+}
+#root {
+  background: $siteColorWhite;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.App {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+  background: $siteColorWhite;
+}
+
+input,
+fieldset {
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.blind,
+legend {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -9999px;
+}
+
+button {
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .App {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+  .App {
+    width: 767px;
+  }
+}

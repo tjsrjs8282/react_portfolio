@@ -1,0 +1,134 @@
+@import '@styles/shared.scss';
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.start {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &.column {
+    flex-direction: column;
+  }
+  &.between {
+    justify-content: space-between;
+  }
+  &.around {
+    justify-content: space-around;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+  &.width {
+    width: 100%;
+  }
+
+  &.image {
+    padding-top: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    img {
+      width: 100%;
+      position: absolute;
+      object-fit: cover;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &.col4 {
+    width: 23.5%;
+    margin-right: 2%;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  &.col3 {
+    width: 32%;
+    margin-right: 2%;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &.col2 {
+    width: 49%;
+    margin-right: 2%;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  &.radius {
+    border-radius: 15px;
+  }
+  &.shadow {
+    box-shadow: $boxShadow;
+  }
+  &.padding {
+    padding: 1.7rem 1.5rem;
+    box-sizing: border-box;
+  }
+  &.fontWhite {
+    color: $siteColorWhite;
+    border-color: #70ad60 !important;
+  }
+
+  &.colorGray {
+    background: $lineColor3;
+  }
+  &.colorWhite {
+    background: $siteColorWhite;
+  }
+  &.colorMain {
+    background: $siteColorMain;
+  }
+  &.colorSub {
+    background: $siteColorSub;
+  }
+  &.marginLeft {
+    margin-left: 0.8rem;
+  }
+  &.marginRight {
+    margin-right: 0.8rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &.marginTop {
+    margin-top: 1rem;
+    &:first-child {
+      margin-top: 1.6rem;
+    }
+  }
+  &.marginBottom {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.paddingBottom {
+    padding: 1.3rem 0px;
+    &:first-child {
+      padding-top: 0px;
+    }
+    &:last-child {
+      padding-bottom: 0px;
+    }
+  }
+  &.siteColorMain {
+    background: #000;
+    border-color: #70ad60 !important;
+  }
+
+  &.borderBottom {
+    border-bottom: 1px solid $lineColor1;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
